@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
-    <title>Encriptador</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Encriptador Oracle One-Emilio Luna </title>
 </head>
+
 <body>
-    <header>
-        <img class="logo" src="/imagenes/Frame 6.png" alt="logo de alura" >
-    </header>
-    <main>
-        <section>
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-            <div>
-                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
-            </div>
-            <div class="botones">
-                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-            </div>
-        </section>
-        <section>
+
+    <nav class="nav-extended teal lighten-2">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center"><i style="padding-left: 15px;" class="material-icons">lock</i>Encriptador</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="">@emilioenlaluna</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#test1">Encriptar*</a></li>
+                <li class="tab"><a  href="#test2">Desencriptar</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="">@emilioenlaluna</a></li>
+    </ul>
+
+    <div class="">
+        <div id="test1" class="col s6 cyan lighten-5" style="height: 100vh;">Encriptar
+            <textarea class="materialize-textarea" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
             <textarea class="mensaje" cols="20" rows="10"></textarea>
-            <div>
-                <button class="copiar" onclick="copiar()">Copiar</button>
-            </div>
-        </section>
-    </main>
-<script src="/script.js"></script>
+            <button class="copiar" onclick="copiar()" >Copiar</button>
+        </div>
+        <div id="test2" class="col s6 pull-l5  teal lighten-5" style="height: 100vh;">Desencriptar
+            <div class="input-field col s12">
+                <textarea class="materialize-textarea" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <label for="textarea1">Textarea</label>
+              </div>
+            
+            <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            <textarea class="mensaje" cols="20" rows="10"></textarea>
+            <button class="copiar" onclick="copiar()">Copiar</button>
+        </div>
+      </div>
+    
+    
+
+    
+
+    
+    <script src="main.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
