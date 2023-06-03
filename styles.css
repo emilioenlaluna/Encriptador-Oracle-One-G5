@@ -1,0 +1,67 @@
+.titulo {
+    font-family: 'Abril Fatface', cursive;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.titulo:hover {
+    background-color: rgba(246, 178, 181, 0.2);
+    border-radius: 90px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #916c80;
+    color: #fff7ae;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    border-color: white;
+}
+
+.nav-extended {
+    background-color: #48284a;
+}
+
+.encriptar {
+    background-color: #ffc6d9;
+}
+
+.desencriptar {
+    background-color: #ffe1c6;
+}
+
+.tabs .tab a,
+a {
+    font-size: 30px;
+    text-transform: none;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+nav ul li a {
+    font-size: 20px;
+    text-transform: none;
+    font-family: 'Red Hat Display', sans-serif;
+    border-radius: 90px;
+}
+
+nav ul a:hover {
+    border-radius: 90px;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #ee6e73;
+}
+
+footer {
+    background-color: #916c80;
+    height: 15vh;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-transform: none;
+    font-family: 'Red Hat Display', sans-serif;
+
+}
