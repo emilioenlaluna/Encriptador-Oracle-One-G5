@@ -13,7 +13,17 @@ button {
     padding: 20px;
     border-radius: 50px;
     background-color: #916c80;
-    color: #fff7ae;
+    color: #ffffff;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    border-color: white;
+}
+
+button:hover{
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #48284a;
+    color: #ffffff;
     font-family: 'Abril Fatface', cursive;
     font-size: 20px;
     border-color: white;
@@ -49,12 +59,6 @@ nav ul a:hover {
     border-radius: 90px;
 }
 
-.tabs .tab a:hover,
-.tabs .tab a.active {
-    background-color: transparent;
-    color: #ee6e73;
-}
-
 footer {
     background-color: #916c80;
     height: 15vh;
@@ -63,5 +67,32 @@ footer {
     color: white;
     text-transform: none;
     font-family: 'Red Hat Display', sans-serif;
+    padding-top: 20px;
+}
 
+textarea.materialize-textarea:focus:not([readonly])  {
+    border-bottom: 1px solid #48284a;
+    -webkit-box-shadow: 0 1px 0 0 #48284a;
+    box-shadow: 0 1px 0 0 #48284a;
+}
+
+textarea::placeholder {
+    color: #916c80; /* Your desired color */
+  }
+
+.idea{
+
+    font-size: 25px;
+    color: #48284a;
+    font-family: 'Red Hat Display', sans-serif;
+    padding-top: 20px;
+}
+
+button:focus {
+    outline: none;
+    background-color: #6f3d72;
+}
+
+.input-field>label{
+    color: #6f3d72;
 }

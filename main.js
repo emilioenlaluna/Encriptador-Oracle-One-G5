@@ -1,8 +1,6 @@
-const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
-const copia = document.querySelector(".copiar");
-copia.style.display = "none"
-
+/*
+Instancias de Materialize
+*/
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
@@ -12,8 +10,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+/*
+
+Selectores de entradas JS
+
+*/
+
+const textonormal = document.querySelector(".textonormal");
+const salidatextonormal = document.querySelector(".salidatextonormal");
 
 
+const textoencriptado = document.querySelector(".textoencriptado");
+const salidatextoencriptado = document.querySelector(".salidatextoencriptado");
+
+
+const copia = document.querySelector(".copiar");
+const copiadesencriptado = document.querySelector(".copiardesencriptado");
+
+copia.style.display = "none"
+copiadesencriptado.style.display = "none"
+
+/**
+ * Funcion para eliminar acentos
+ */
 function quitarAcentos(texto) {
     const mapaAcentos = {
         Á: "A",
@@ -36,15 +55,13 @@ function quitarAcentos(texto) {
 
 
 function btnEncriptar() {
-    const entrada = textArea.value
+    const entrada = textonormal.value
     const limpio = quitarAcentos(entrada)
     const textoEncriptado = encriptar(limpio)
-    mensaje.value = textoEncriptado
-    mensaje.style.backgroundImage = "none"
-    textArea.value = "";
+    salidatextonormal.value = textoEncriptado
+    salidatextonormal.style.backgroundImage = "none"
+    textonormal.value = "";
     copia.style.display = "block"
-
-
 }
 
 
@@ -65,10 +82,11 @@ function encriptar(stringEncriptada) {
 
 
 function btnDesencriptar() {
-    const textoEncriptado = desencriptar(textArea.value)
-    mensaje.value = textoEncriptado
-    textArea.value = "";
+    const textoencriptadovar = desencriptar(textoencriptado.value)
+    salidatextoencriptado.value = textoencriptadovar
+    textoencriptado.value = "";
 
+    copiadesencriptado.style.display = "block"
 }
 
 
@@ -88,9 +106,17 @@ function desencriptar(stringDesencriptada) {
 
 
 function copiar() {
-    mensaje.select();
-    navigator.clipboard.writeText(mensaje.value)
-    mensaje.value = "";
-    alert("Texto Copiado")
+    salidatextonormal.select();
+    navigator.clipboard.writeText(salidatextonormal.value)
+    salidatextonormal.value = "";
+    M.toast({html: 'Texto Copiado!', classes: 'rounded'});
+    copia.style.display = "none"
 }
 
+function copiardesencriptado(){
+    salidatextoencriptado.select();
+    navigator.clipboard.writeText(salidatextoencriptado.value)
+    salidatextoencriptado.value = "";
+    M.toast({html: 'Texto Copiado!', classes: 'rounded'});
+    copiadesencriptado.style.display = "none"
+}
