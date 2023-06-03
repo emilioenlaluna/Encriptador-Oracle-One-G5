@@ -96,3 +96,13 @@ button:focus {
 .input-field>label{
     color: #6f3d72;
 }
+
+
+footer a{
+    background-color: #6f3d72;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
